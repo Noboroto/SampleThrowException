@@ -1,0 +1,26 @@
+﻿<Window x:Class="SampleThrowException.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    d1p1:Ignorable="d" 
+                    xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    >
+            <ResourceDictionary.MergedDictionaries>
+                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="Teal" SecondaryColor="Cyan" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Button x:Name="DarkBut" Content="To Dark" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="130,163,0,0" Click="DarkBut_Click"/>
+        <Button x:Name="LightBut" Content="To Light" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="475,163,0,0" Click="LightBut_Click"/>
+    </Grid>
+</Window>
